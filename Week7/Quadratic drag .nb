@@ -1,0 +1,506 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     17731,        496]
+NotebookOptionsPosition[     16930,        465]
+NotebookOutlinePosition[     17286,        481]
+CellTagsIndexPosition[     17243,        478]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", "=", "9.8"}], ";", 
+  RowBox[{"(*", 
+   RowBox[{"grav", ".", "constant"}], "*)"}], 
+  RowBox[{"l", "=", "0.5"}], ";", 
+  RowBox[{"(*", 
+   RowBox[{"length", " ", "of", " ", "pendulum"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "''"}], "[", "t", "]"}], "\[Equal]", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        RowBox[{"gx", "'"}], "[", "t", "]"}]}], "/", 
+      RowBox[{"vt", "^", "2"}]}], ")"}], " ", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], 
+     "]"}]}]}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"y", "''"}], "[", "t", "]"}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"-", "g"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"y", "'"}], "[", "t", "]"}], "/", 
+        RowBox[{"vt", "^", "2"}]}], ")"}], " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "'"}], "[", "t", "]"}], "^", "2"}], "+", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"y", "'"}], "[", "t", "]"}], "^", "2"}]}], "]"}]}]}], 
+    ")"}]}]}], "\n", 
+ RowBox[{"result", "=", 
+  RowBox[{"NDSolve", "[", 
+   RowBox[{"[", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"\[Theta]0", "=", 
+       RowBox[{"20", "*", 
+        RowBox[{"\[Pi]", "/", "180"}]}]}], ";", 
+      RowBox[{"(*", 
+       RowBox[{"20", " ", "\[IndentingNewLine]", "egrees"}], "*)"}], 
+      RowBox[{"\[Omega]0", "=", "0"}], ";", 
+      RowBox[{"(*", 
+       RowBox[{"starting", " ", "from", " ", "rest"}], "*)"}], 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"\[Phi]", "=", "y"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"t", "=", "x"}], ";"}], "*)"}], 
+      RowBox[{"ode1", "=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"\[Theta]", "''"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{"g", "/", "l"}], ")"}]}], "*", 
+           RowBox[{"Sin", "[", 
+            RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], ",", 
+         RowBox[{
+          RowBox[{"\[Theta]", "[", "0", "]"}], "\[Equal]", "\[Theta]0"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"\[Theta]", "'"}], "[", "0", "]"}], "\[Equal]", 
+          "\[Omega]0"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"sol", "=", 
+       RowBox[{"NDSolve", "[", 
+        RowBox[{"ode1", ",", "\[Theta]", ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], ";"}], 
+     "*)"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.578184262442687*^9, 3.578184262450184*^9}, 
+   3.5781844546703377`*^9, {3.5781847513164377`*^9, 3.578184753364018*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["x", "\[Prime]\[Prime]",
+    MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["gx", "\[Prime]",
+       MultilineFunction->None], "[", "t", "]"}], " ", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["x", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["y", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], "2"]}]]}], 
+    SuperscriptBox["vt", "2"]]}]}]], "Output",
+ CellChangeTimes->{{3.578184271622511*^9, 3.578184292824459*^9}, 
+   3.578184622640184*^9, 3.578184740562549*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["y", "\[Prime]\[Prime]",
+    MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"-", "9.8`"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["y", "\[Prime]",
+         MultilineFunction->None], "[", "t", "]"}], " ", 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{
+           SuperscriptBox["x", "\[Prime]",
+            MultilineFunction->None], "[", "t", "]"}], "2"], "+", 
+         SuperscriptBox[
+          RowBox[{
+           SuperscriptBox["y", "\[Prime]",
+            MultilineFunction->None], "[", "t", "]"}], "2"]}]]}], 
+      SuperscriptBox["vt", "2"]]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{{3.578184271622511*^9, 3.578184292824459*^9}, 
+   3.578184622640184*^9, 3.578184740564885*^9}]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.578184624914577*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"myplot1", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"180", "/", "Pi"}], ")"}], " ", 
+       RowBox[{"\[Theta]", "[", "t", "]"}]}], "/.", "sol"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"0", ",", "0", ",", "1"}], "]"}]}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"omega", "=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"(", 
+     RowBox[{"g", "/", "l"}], ")"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"approx", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"180", "/", "Pi"}], ")"}], " ", "\[Theta]0", " ", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"omega", "*", "t"}], "]"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"myplot2", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{"approx", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"1", ",", "0", ",", "0"}], "]"}]}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"{", 
+   RowBox[{"myplot1", ",", "myplot2"}], "}"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.578184545480411*^9, 3.578184555080473*^9}, {
+  3.5781845892624826`*^9, 3.5781846092178707`*^9}, {3.57818465917984*^9, 
+  3.5781846829122143`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({sol}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.578184549701343*^9, {3.5781846109652653`*^9, 3.578184632705351*^9}, 
+   3.578184700332776*^9, 3.5781847768996353`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({sol}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.578184549701343*^9, {3.5781846109652653`*^9, 3.578184632705351*^9}, 
+   3.578184700332776*^9, 3.578184776922812*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({sol}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.578184549701343*^9, {3.5781846109652653`*^9, 3.578184632705351*^9}, 
+   3.578184700332776*^9, 3.57818477695079*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{
+  3.578184549701343*^9, {3.5781846109652653`*^9, 3.578184632705351*^9}, 
+   3.578184700332776*^9, 3.578184776984241*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGAwAmIQPQpGwSjADQD2ewHg
+    "], {}], {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  Method->{},
+  PlotRange->{All, All},
+  PlotRangeClipping->True,
+  PlotRangePadding->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.578184611518795*^9, 3.5781846327922173`*^9}, 
+   3.5781847004428883`*^9, 3.57818477705846*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "=", "9.8"}], ";", 
+    RowBox[{"l", "=", "0.5"}], ";", 
+    RowBox[{"omega", "=", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"(", 
+       RowBox[{"g", "/", "l"}], ")"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"result", "=", 
+        RowBox[{"NDSolve", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"\[Theta]", "''"}], "[", "t", "]"}], "\[Equal]", 
+             RowBox[{
+              RowBox[{"-", 
+               RowBox[{"(", 
+                RowBox[{"g", "/", "l"}], ")"}]}], "*", 
+              RowBox[{"Sin", "[", 
+               RowBox[{"\[Theta]", "[", "t", "]"}], "]"}]}]}], ",", 
+            RowBox[{
+             RowBox[{"\[Theta]", "[", "0", "]"}], "\[Equal]", "\[Theta]0"}], 
+            ",", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"\[Theta]", "'"}], "[", "0", "]"}], "\[Equal]", 
+             "\[Omega]0"}]}], "}"}], ",", "\[Theta]", ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"180", "/", "Pi"}], ")"}], " ", "\[Theta]0", " ", 
+           RowBox[{"Cos", "[", 
+            RowBox[{"omega", "*", "t"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"180", "/", "Pi"}], ")"}], "*", 
+            RowBox[{"\[Theta]", "[", "t", "]"}]}], "/.", "result"}]}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "Blue", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"Dashed", ",", "Red"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"\"\<t (s)\>\"", ",", "\"\<\[Theta] (rad)\>\""}], "}"}]}], 
+        ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "20"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "20"}], ",", "20"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"500", ",", "300"}], "}"}]}]}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"l", ",", "0.5", ",", "\"\<length (m)\>\""}], "}"}], ",", "0", 
+     ",", "2", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Theta]0", ",", 
+       RowBox[{"20", "*", 
+        RowBox[{"Pi", "/", "180"}]}], ",", "\"\<initial angle (rad)\>\""}], 
+      "}"}], ",", ".1", ",", 
+     RowBox[{"\[Pi]", "/", "2"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Omega]0", ",", "0", ",", "\"\<initial speed (rad/s)\>\""}], 
+      "}"}], ",", "0", ",", "10.", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.578184704585607*^9, 3.578184704591978*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`l$$ = 0.5, $CellContext`\[Theta]0$$ = 
+    Rational[1, 9] Pi, $CellContext`\[Omega]0$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`l$$], 0.5, "length (m)"}, 0, 2}, {{
+       Hold[$CellContext`\[Theta]0$$], Rational[1, 9] Pi, 
+       "initial angle (rad)"}, 0.1, Rational[1, 2] Pi}, {{
+       Hold[$CellContext`\[Omega]0$$], 0, "initial speed (rad/s)"}, 0, 10.}}, 
+    Typeset`size$$ = {500., {148., 152.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`l$12180$$ = 0, $CellContext`\[Theta]0$12185$$ = 
+    0, $CellContext`\[Omega]0$12186$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`l$$ = 0.5, $CellContext`\[Theta]0$$ = 
+        Rational[1, 9] Pi, $CellContext`\[Omega]0$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`l$$, $CellContext`l$12180$$, 0], 
+        Hold[$CellContext`\[Theta]0$$, $CellContext`\[Theta]0$12185$$, 0], 
+        Hold[$CellContext`\[Omega]0$$, $CellContext`\[Omega]0$12186$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`g = 9.8; $CellContext`l$$ = 
+        0.5; $CellContext`omega = Sqrt[$CellContext`g/$CellContext`l$$]; 
+       Module[{$CellContext`result$ = 
+          NDSolve[{
+            Derivative[
+              2][$CellContext`\[Theta]][$CellContext`t] == \
+(-($CellContext`g/$CellContext`l$$)) Sin[
+                $CellContext`\[Theta][$CellContext`t]], $CellContext`\[Theta][
+              0] == $CellContext`\[Theta]0$$, 
+             Derivative[1][$CellContext`\[Theta]][
+              0] == $CellContext`\[Omega]0$$}, $CellContext`\[Theta], \
+{$CellContext`t, 0, 20}]}, 
+         Plot[{(180/Pi) $CellContext`\[Theta]0$$ 
+           Cos[$CellContext`omega $CellContext`t], 
+           
+           ReplaceAll[(180/
+             Pi) $CellContext`\[Theta][$CellContext`t], \
+$CellContext`result$]}, {$CellContext`t, 0, 20}, 
+          PlotStyle -> {{Blue}, {Dashed, Red}}, PlotRange -> All, 
+          AxesLabel -> {"t (s)", "\[Theta] (rad)"}, 
+          PlotRange -> {{0, 20}, {-20, 20}}, ImageSize -> {500, 300}]]), 
+      "Specifications" :> {{{$CellContext`l$$, 0.5, "length (m)"}, 0, 2, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`\[Theta]0$$, Rational[1, 9] Pi, 
+          "initial angle (rad)"}, 0.1, Rational[1, 2] Pi, Appearance -> 
+         "Labeled"}, {{$CellContext`\[Omega]0$$, 0, "initial speed (rad/s)"}, 
+         0, 10., Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{886., {176., 181.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.578184714013709*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 461},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 2990, 92, 131, "Input"],
+Cell[3572, 116, 773, 23, 59, "Output"],
+Cell[4348, 141, 880, 26, 67, "Output"]
+}, Open  ]],
+Cell[5243, 170, 87, 1, 46, "Input"],
+Cell[CellGroupData[{
+Cell[5355, 175, 1551, 44, 131, "Input"],
+Cell[6909, 221, 630, 12, 41, "Message"],
+Cell[7542, 235, 628, 12, 41, "Message"],
+Cell[8173, 249, 627, 12, 41, "Message"],
+Cell[8803, 263, 632, 13, 24, "Message"],
+Cell[9438, 278, 483, 13, 237, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9958, 296, 3526, 97, 182, "Input"],
+Cell[13487, 395, 3427, 67, 374, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
