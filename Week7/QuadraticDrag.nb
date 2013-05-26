@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     21846,        534]
-NotebookOptionsPosition[     21469,        516]
-NotebookOutlinePosition[     21826,        532]
-CellTagsIndexPosition[     21783,        529]
+NotebookDataLength[     25563,        626]
+NotebookOptionsPosition[     25067,        605]
+NotebookOutlinePosition[     25423,        621]
+CellTagsIndexPosition[     25380,        618]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -274,10 +274,10 @@ Cell[BoxData[{
        RowBox[{"{", 
         RowBox[{
          RowBox[{"{", 
-          RowBox[{"0", ",", "2000"}], "}"}], ",", 
+          RowBox[{"0", ",", "4000"}], "}"}], ",", 
          RowBox[{"{", 
           RowBox[{
-           RowBox[{"-", "10"}], ",", "500"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+           RowBox[{"-", "10"}], ",", "200"}], "}"}]}], "}"}]}]}], "]"}], ",", 
     "\[IndentingNewLine]", 
     RowBox[{"{", 
      RowBox[{
@@ -329,7 +329,13 @@ Cell[BoxData[{
   " "}]}], "Input",
  CellChangeTimes->{{3.5784593083314133`*^9, 3.578459400537854*^9}, {
    3.5784594544249487`*^9, 3.57845951686595*^9}, 3.5784595751489058`*^9, 
-   3.5784596194614363`*^9, {3.578459687369116*^9, 3.5784597322077093`*^9}}],
+   3.5784596194614363`*^9, {3.578459687369116*^9, 3.5784597322077093`*^9}, {
+   3.578515017796773*^9, 3.5785150226207943`*^9}, {3.578516899742256*^9, 
+   3.578516908635233*^9}, {3.5785178497196083`*^9, 3.578517850564001*^9}, {
+   3.578517891030431*^9, 3.578517891734507*^9}, {3.5785179523535757`*^9, 
+   3.57851796205553*^9}, {3.578518000722674*^9, 3.578518002014246*^9}, {
+   3.578522174939892*^9, 3.5785221764190493`*^9}, {3.578522289012706*^9, 
+   3.5785222909827833`*^9}, {3.5785223572207212`*^9, 3.578522359083022*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {}, 
@@ -420,15 +426,18 @@ Oe7Q0f8AI9KEKQ==
   PlotRangeClipping->True,
   PlotRangePadding->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{3.578459406024275*^9, 3.578459585353518*^9, 
-  3.5784596899138947`*^9, 3.578459740218318*^9}],
+  3.5784596899138947`*^9, 3.578459740218318*^9, 3.578515027112465*^9, 
+  3.5785173152321243`*^9, 3.5785178538772297`*^9, 3.578517893389812*^9, 
+  3.578517964002742*^9, 3.578518004236299*^9, 3.578522179254876*^9, 
+  3.57852229285732*^9, 3.5785223608978252`*^9}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`g$$ = 18., $CellContext`tf$$ = 
-    10.583106955528258`, $CellContext`v$$ = 69., $CellContext`vt$$ = 
-    10, $CellContext`z$$ = 1.56, $CellContext`\[Theta]$$ = 0.8060061266653973,
-     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+   DynamicModuleBox[{$CellContext`g$$ = 9.8, $CellContext`tf$$ = 
+    22.400000000000002`, $CellContext`v$$ = 260., $CellContext`vt$$ = 
+    135., $CellContext`z$$ = 1., $CellContext`\[Theta]$$ = 0.0872664626, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`tf$$], 0.01, "time(s)"}, 0.01, 30}, {{
@@ -437,23 +446,23 @@ Cell[BoxData[
        Hold[$CellContext`vt$$], 10, "Terminal Velocity(m/s)"}, 1., 135}, {{
        Hold[$CellContext`z$$], 0, "Starting Height(m)"}, 0., 5}, {{
        Hold[$CellContext`\[Theta]$$], Rational[5, 18] Pi, "\[Theta](rad/s)"}, 
-      0.01, Rational[1, 2] Pi}}, Typeset`size$$ = {310., {42., 47.}}, 
+      0.01, Rational[1, 2] Pi}}, Typeset`size$$ = {360., {16., 20.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`tf$47925$$ = 0, $CellContext`v$47926$$ = 
-    0, $CellContext`g$47927$$ = 0, $CellContext`vt$47928$$ = 
-    0, $CellContext`z$47929$$ = 0, $CellContext`\[Theta]$47930$$ = 0}, 
+    True, $CellContext`tf$316737$$ = 0, $CellContext`v$316738$$ = 
+    0, $CellContext`g$316739$$ = 0, $CellContext`vt$316740$$ = 
+    0, $CellContext`z$316741$$ = 0, $CellContext`\[Theta]$316742$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`g$$ = 9.8, $CellContext`tf$$ = 
         0.01, $CellContext`v$$ = 10, $CellContext`vt$$ = 10, $CellContext`z$$ = 
         0, $CellContext`\[Theta]$$ = Rational[5, 18] Pi}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`tf$$, $CellContext`tf$47925$$, 0], 
-        Hold[$CellContext`v$$, $CellContext`v$47926$$, 0], 
-        Hold[$CellContext`g$$, $CellContext`g$47927$$, 0], 
-        Hold[$CellContext`vt$$, $CellContext`vt$47928$$, 0], 
-        Hold[$CellContext`z$$, $CellContext`z$47929$$, 0], 
-        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$47930$$, 0]}, 
+        Hold[$CellContext`tf$$, $CellContext`tf$316737$$, 0], 
+        Hold[$CellContext`v$$, $CellContext`v$316738$$, 0], 
+        Hold[$CellContext`g$$, $CellContext`g$316739$$, 0], 
+        Hold[$CellContext`vt$$, $CellContext`vt$316740$$, 0], 
+        Hold[$CellContext`z$$, $CellContext`z$316741$$, 0], 
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$316742$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -487,7 +496,7 @@ $CellContext`v$$ Sin[$CellContext`\[Theta]$$] $CellContext`t -
             Derivative[1][$CellContext`y][0] == $CellContext`v$$ 
              Sin[$CellContext`\[Theta]$$]}, {$CellContext`x, $CellContext`y}, \
 {$CellContext`t, 0, 200}]]], {$CellContext`t, 0, $CellContext`tf$$}, 
-        PlotRange -> {{0, 2000}, {-10, 500}}], 
+        PlotRange -> {{0, 4000}, {-10, 200}}], 
       "Specifications" :> {{{$CellContext`tf$$, 0.01, "time(s)"}, 0.01, 30, 
          Appearance -> "Labeled"}, {{$CellContext`v$$, 10, "Velocity(m/s)"}, 
          0.01, 439, Appearance -> 
@@ -500,7 +509,7 @@ $CellContext`v$$ Sin[$CellContext`\[Theta]$$] $CellContext`t -
          "Labeled"}, {{$CellContext`\[Theta]$$, Rational[5, 18] Pi, 
           "\[Theta](rad/s)"}, 0.01, Rational[1, 2] Pi, Appearance -> 
          "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{687., {125., 131.}},
+     ImageSizeCache->{776., {112., 117.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -511,11 +520,91 @@ $CellContext`v$$ Sin[$CellContext`\[Theta]$$] $CellContext`t -
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.578459406024275*^9, 3.578459585353518*^9, 
-  3.5784596899138947`*^9, 3.578459740280883*^9}]
-}, Open  ]]
+  3.5784596899138947`*^9, 3.578459740218318*^9, 3.578515027112465*^9, 
+  3.5785173152321243`*^9, 3.5785178538772297`*^9, 3.578517893389812*^9, 
+  3.578517964002742*^9, 3.578518004236299*^9, 3.578522179254876*^9, 
+  3.57852229285732*^9, 3.578522361036274*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "2.\na.\n",
+ Cell[BoxData[GridBox[{
+    {"Projectile", 
+     RowBox[{"Velocity", 
+      RowBox[{"(", 
+       RowBox[{"m", "/", "s"}], ")"}]}], 
+     RowBox[{"Angle", 
+      RowBox[{"(", "rad", ")"}]}], 
+     RowBox[{"Velocity", " ", "without", " ", "air", " ", "resistance", 
+      RowBox[{"(", 
+       RowBox[{"m", "/", "s"}], ")"}]}], 
+     RowBox[{"Angle", " ", "with", " ", "no", " ", "air", " ", "resistance", 
+      RowBox[{"(", "rad", ")"}]}]},
+    {
+     RowBox[{"Human", " ", "Cannonball"}], "31", ".909019", "28", ".905897"},
+    {
+     RowBox[{"Golf", " ", "Ball"}], "37", "1.03388`", "29", ".974572"},
+    {"Baseball", "41", "1.12441`", "30", "1.05261`"}
+   },
+   GridBoxDividers->{
+    "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+     "RowsIndexed" -> {}}]]]
+}], "Text",
+ CellChangeTimes->{{3.578515201811789*^9, 3.5785152054971037`*^9}, {
+  3.5785152378881407`*^9, 3.578515280562316*^9}, {3.578515379792425*^9, 
+  3.5785155527281*^9}, {3.578515692242249*^9, 3.578515693227188*^9}, {
+  3.5785157698264723`*^9, 3.5785157967119017`*^9}, {3.5785158606798153`*^9, 
+  3.578515881028981*^9}, {3.5785165443382998`*^9, 3.5785165525420322`*^9}, {
+  3.578516781258144*^9, 3.578516790814225*^9}, {3.5785168308373547`*^9, 
+  3.5785168564285717`*^9}}],
+
+Cell[TextData[{
+ "b. Civil war Cannon ball\n",
+ Cell[BoxData[GridBox[{
+    {
+     RowBox[{"Angle", 
+      RowBox[{"(", "degreees", ")"}]}], 
+     RowBox[{"Range", 
+      RowBox[{"(", "m", ")"}]}]},
+    {"5", "1760"},
+    {"10", "2385"},
+    {"15", "2775"}
+   },
+   GridBoxDividers->{
+    "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+     "RowsIndexed" -> {}}]]],
+ "\n\nc.\nwithin range of 1000 meters\n",
+ Cell[BoxData[GridBox[{
+    {
+     RowBox[{"Angle", 
+      RowBox[{"(", "degrees", ")"}]}], 
+     RowBox[{"Velocity", 
+      RowBox[{"(", 
+       RowBox[{"m", "/", "s"}], ")"}]}]},
+    {"5", 
+     RowBox[{"<", "260"}]},
+    {"10", 
+     RowBox[{"<", "210"}]},
+    {"15", 
+     RowBox[{"<", "166"}]}
+   },
+   GridBoxDividers->{
+    "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+     "RowsIndexed" -> {}}]]]
+}], "Text",
+ CellChangeTimes->{{3.5785215410380707`*^9, 3.578521563481124*^9}, {
+  3.578521606596632*^9, 3.578521646888906*^9}, {3.578521715592753*^9, 
+  3.578521791475913*^9}, {3.578521951023592*^9, 3.578521953398238*^9}, {
+  3.578522006673192*^9, 3.578522033945156*^9}, {3.5785220916582317`*^9, 
+  3.578522160239176*^9}, {3.578522432475399*^9, 3.578522447854661*^9}, {
+  3.5785225116835957`*^9, 3.578522538943659*^9}, {3.5785226185772877`*^9, 
+  3.578522764041869*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.578515223223979*^9, 3.578515233019484*^9}}]
 },
-WindowSize->{740, 451},
-WindowMargins->{{Automatic, 125}, {45, Automatic}},
+WindowSize->{978, 451},
+WindowMargins->{{-5, Automatic}, {Automatic, 44}},
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
 StyleDefinitions->"Default.nb"
@@ -532,13 +621,15 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 10901, 309, 556, "Input"],
-Cell[11483, 333, 5094, 89, 237, "Output"],
-Cell[16580, 424, 4873, 89, 307, "Output"]
-}, Open  ]]
+Cell[579, 22, 11350, 315, 556, "Input"],
+Cell[11932, 339, 5306, 92, 237, "Output"],
+Cell[17241, 433, 5090, 92, 246, "Output"]
+}, Open  ]],
+Cell[22346, 528, 1292, 30, 130, "Text"],
+Cell[23641, 560, 1327, 40, 249, "Text"],
+Cell[24971, 602, 92, 1, 28, "Input"]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
