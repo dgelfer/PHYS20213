@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     25563,        626]
-NotebookOptionsPosition[     25067,        605]
-NotebookOutlinePosition[     25423,        621]
-CellTagsIndexPosition[     25380,        618]
+NotebookDataLength[     25613,        627]
+NotebookOptionsPosition[     25117,        606]
+NotebookOutlinePosition[     25473,        622]
+CellTagsIndexPosition[     25430,        619]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -252,7 +252,7 @@ Cell[BoxData[{
             RowBox[{
              RowBox[{"x", "[", "0", "]"}], "==", "0"}], ",", 
             RowBox[{
-             RowBox[{"y", "[", "0", "]"}], "\[Equal]", "z"}], ",", " ", 
+             RowBox[{"y", "[", "0", "]"}], "\[Equal]", "h"}], ",", " ", 
             RowBox[{
              RowBox[{
               RowBox[{"x", "'"}], "[", "0", "]"}], "==", " ", 
@@ -313,7 +313,7 @@ Cell[BoxData[{
     RowBox[{"{", 
      RowBox[{
       RowBox[{"{", 
-       RowBox[{"z", ",", " ", "0", ",", " ", "\"\<Starting Height(m)\>\""}], 
+       RowBox[{"h", ",", " ", "0", ",", " ", "\"\<Starting Height(m)\>\""}], 
        "}"}], ",", " ", "0.0", ",", " ", "5", ",", " ", "\[IndentingNewLine]", 
       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
     "\[IndentingNewLine]", 
@@ -335,7 +335,8 @@ Cell[BoxData[{
    3.578517891030431*^9, 3.578517891734507*^9}, {3.5785179523535757`*^9, 
    3.57851796205553*^9}, {3.578518000722674*^9, 3.578518002014246*^9}, {
    3.578522174939892*^9, 3.5785221764190493`*^9}, {3.578522289012706*^9, 
-   3.5785222909827833`*^9}, {3.5785223572207212`*^9, 3.578522359083022*^9}}],
+   3.5785222909827833`*^9}, {3.5785223572207212`*^9, 3.578522359083022*^9}, {
+   3.578530126433525*^9, 3.578530145443672*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {}, 
@@ -621,13 +622,13 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 11350, 315, 556, "Input"],
-Cell[11932, 339, 5306, 92, 237, "Output"],
-Cell[17241, 433, 5090, 92, 246, "Output"]
+Cell[579, 22, 11400, 316, 556, "Input"],
+Cell[11982, 340, 5306, 92, 237, "Output"],
+Cell[17291, 434, 5090, 92, 246, "Output"]
 }, Open  ]],
-Cell[22346, 528, 1292, 30, 130, "Text"],
-Cell[23641, 560, 1327, 40, 249, "Text"],
-Cell[24971, 602, 92, 1, 28, "Input"]
+Cell[22396, 529, 1292, 30, 130, "Text"],
+Cell[23691, 561, 1327, 40, 249, "Text"],
+Cell[25021, 603, 92, 1, 28, "Input"]
 }
 ]
 *)
